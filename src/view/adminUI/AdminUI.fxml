@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="385.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.adminUI.AdminUIController">
+   <children>
+      <Label alignment="CENTER" layoutX="99.0" layoutY="7.0" text="College management System" textAlignment="CENTER" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="-1.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="331.0" layoutY="63.0" prefWidth="200.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="60.0" />
+      <Button fx:id="uploadStudent" layoutX="114.0" layoutY="100.0" mnemonicParsing="false" onAction="#uploadStudents" prefHeight="40.0" prefWidth="157.0" text="Upload Students" AnchorPane.leftAnchor="114.0" />
+      <Button fx:id="uploadLecturers" layoutX="114.0" layoutY="163.0" mnemonicParsing="false" onAction="#uploadLecturers" prefHeight="41.0" prefWidth="157.0" text="Upload Lecturers" AnchorPane.leftAnchor="114.0" />
+      <Button fx:id="uploadSubjects" layoutX="114.0" layoutY="229.0" mnemonicParsing="false" onAction="#uploadSubjects" prefHeight="40.0" prefWidth="157.0" text="Upload Subjects" AnchorPane.leftAnchor="114.0" />
+      <Label alignment="CENTER" layoutX="-31.0" layoutY="294.0" prefHeight="43.0" prefWidth="156.0" text="CoMaSys" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="-31.0">
+         <font>
+            <Font name="Trebuchet MS" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="backTomain" layoutX="4.0" layoutY="64.0" mnemonicParsing="false" onAction="#backTomainHandler" text="Back to Main" />
+   </children>
+</AnchorPane>

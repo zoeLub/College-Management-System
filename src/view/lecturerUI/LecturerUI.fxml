@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.lecturerUI.LecturerUIController">
+   <children>
+      <Label alignment="CENTER" layoutX="99.0" layoutY="7.0" text="College management System" textAlignment="CENTER" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="-1.0">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Separator layoutX="331.0" layoutY="63.0" prefWidth="200.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="60.0" />
+      <AnchorPane fx:id="resultPane" layoutX="244.0" layoutY="75.0" prefHeight="466.0" prefWidth="644.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="79.0">
+         <children>
+            <PieChart fx:id="pieChart" layoutX="63.0" layoutY="34.0" prefHeight="461.0" prefWidth="635.0" style="-fx-background-color: white;" title="Student Pass Rate" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <LineChart fx:id="lineChart" layoutX="27.0" layoutY="9.0" prefHeight="461.0" prefWidth="635.0" style="-fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAxis" side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <TableView fx:id="resultTableView" focusTraversable="false" layoutX="190.0" layoutY="100.0" prefHeight="461.0" prefWidth="635.0" style="-fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="studNum" editable="false" prefWidth="111.860107421875" style="fx-text-alignement: center;" text="Student Number" />
+                <TableColumn fx:id="studSurname" editable="false" prefWidth="265.74560546875" text="Suname" />
+                  <TableColumn fx:id="subjCode" editable="false" prefWidth="101.72412109375" text="Subject Code" />
+                  <TableColumn fx:id="mark" editable="false" prefWidth="77.19293212890625" style="fx-text-alignement: center;" text="Mark" />
+                  <TableColumn fx:id="credit" editable="false" prefWidth="82.3629150390625" style="fx-text-alignement: center;" text="Credit" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="240.0" layoutY="78.0" orientation="VERTICAL" prefHeight="441.0" prefWidth="2.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="245.0" AnchorPane.topAnchor="78.0" />
+      <Button fx:id="uploadMarks" layoutX="42.0" layoutY="144.0" mnemonicParsing="false" onAction="#uploadMarksHandler" prefHeight="40.0" prefWidth="157.0" text="Upload Marks" AnchorPane.leftAnchor="42.0" />
+      <Button fx:id="viewMarks" layoutX="42.0" layoutY="219.0" mnemonicParsing="false" onAction="#viewMarksHandler" prefHeight="41.0" prefWidth="157.0" text="View Marks" AnchorPane.leftAnchor="42.0" />
+      <Button fx:id="showPassrate" layoutX="42.0" layoutY="292.0" mnemonicParsing="false" onAction="#showPassRateHandler" prefHeight="40.0" prefWidth="157.0" text="Show Pass Rate" AnchorPane.leftAnchor="42.0" />
+      <Label alignment="CENTER" layoutX="39.0" layoutY="479.0" prefHeight="43.0" prefWidth="156.0" text="CoMaSys" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="39.0">
+         <font>
+            <Font name="Trebuchet MS" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="showResult" layoutX="42.0" layoutY="367.0" mnemonicParsing="false" onAction="#showResultHandler" prefHeight="40.0" prefWidth="157.0" text="Show Results" AnchorPane.leftAnchor="42.0" />
+      <Button fx:id="logoutBtn" layoutX="5.0" layoutY="64.0" mnemonicParsing="false" onAction="#logoutHandler" prefHeight="24.0" prefWidth="66.0" text="Logout" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="64.0" />
+      <Label fx:id="user" layoutX="754.0" layoutY="36.0" text="Logged in as:" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="36.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboBox" layoutX="54.0" layoutY="440.0" prefHeight="25.0" prefWidth="125.0" promptText="Select Subject" AnchorPane.leftAnchor="54.0" />
+   </children>
+</AnchorPane>
